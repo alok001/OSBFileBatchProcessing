@@ -3,9 +3,9 @@ xquery version "1.0" encoding "utf-8";
 (:: OracleAnnotationVersion "1.0" ::)
 
 declare namespace ns1="http://TargetNamespace.com/FileService";
-(:: import schema at "Resources/FileArtifacts/file_input.xsd" ::)
+(:: import schema at "../FileArtifacts/file_input.xsd" ::)
 declare namespace ns2="http://xmlns.oracle.com/pcbpel/adapter/db/top/AddMultiCustomer";
-(:: import schema at "Resources/DBArtifacts/AddMultiCustomer_table.xsd" ::)
+(:: import schema at "../DBArtifacts/AddMultiCustomer_table.xsd" ::)
 
 declare variable $fileReq as element() (:: schema-element(ns1:Root-Element) ::) external;
 

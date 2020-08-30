@@ -21,7 +21,7 @@
                         <con2:id>_ActionId-ac8d33f.N4f5d1a40.0.1743fe529d1.N7ff7</con2:id>
                         <con1:expr>
                             <con2:xqueryTransform>
-                                <con2:resource ref="FilePoller/mapFileToDB"/>
+                                <con2:resource ref="FilePoller/Resources/Xquery/mapFileToDB"/>
                                 <con2:param name="fileReq">
                                     <con2:path>$body/*</con2:path>
                                 </con2:param>
