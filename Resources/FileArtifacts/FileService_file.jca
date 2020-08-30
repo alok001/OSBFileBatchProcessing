@@ -1,0 +1,16 @@
+<adapter-config name="FileService" adapter="file" wsdlLocation="FileService.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIincludeWildcard="*.txt" location="eis/FileAdapter"/>
+  <endpoint-activation portType="Read_ptt" operation="Read">
+    <activation-spec className="oracle.tip.adapter.file.inbound.FileActivationSpec">
+      <property name="PhysicalDirectory" value="D:\Projects\SOA_OSB_DEMO\INPUT_FILE"/>
+      <property name="UseHeaders" value="false"/>
+      <property name="MinimumAge" value="0"/>
+      <property name="Recursive" value="true"/>
+      <property name="PollingFrequency" value="10"/>
+      <property name="DeleteFile" value="true"/>
+      <property name="IncludeFiles" value=".*\.txt"/>
+    </activation-spec>
+  </endpoint-activation>
+
+</adapter-config>

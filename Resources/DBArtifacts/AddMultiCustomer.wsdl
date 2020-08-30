@@ -1,0 +1,20 @@
+<wsdl:definitions name="AddMultiCustomer" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/DemoRestAdapter/FilePoller/AddMultiCustomer" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/DemoRestAdapter/FilePoller/AddMultiCustomer" xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/AddMultiCustomer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <plt:partnerLinkType name="AddMultiCustomer_plt">
+    <plt:role name="AddMultiCustomer_role">
+      <plt:portType name="tns:AddMultiCustomer_ptt"/>
+    </plt:role>
+  </plt:partnerLinkType>
+    <wsdl:types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema">
+        <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/AddMultiCustomer" schemaLocation="AddMultiCustomer_table.xsd"/>
+      </schema>
+    </wsdl:types>
+    <wsdl:message name="CustomCustomerCollection_msg">
+        <wsdl:part name="CustomCustomerCollection" element="top:CustomCustomerCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="AddMultiCustomer_ptt">
+        <wsdl:operation name="insert">
+            <wsdl:input message="tns:CustomCustomerCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

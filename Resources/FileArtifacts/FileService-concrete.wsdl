@@ -1,0 +1,12 @@
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/file/DemoRestAdapter/FilePoller/FileService" name="FileService-concrete" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import location="FileService.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/file/DemoRestAdapter/FilePoller/FileService"/>
+    <wsdl:binding name="Read_ptt-binding" type="fil:Read_ptt" xmlns:fil="http://xmlns.oracle.com/pcbpel/adapter/file/DemoRestAdapter/FilePoller/FileService">
+        <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+        <wsdl:operation name="Read">
+            <soap:operation soapAction="Read"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>
